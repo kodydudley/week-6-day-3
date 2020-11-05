@@ -26,7 +26,7 @@ class CarsService {
 
   async removeCar(carId) {
     try {
-      await api.delete('/cars/', carId)
+      await api.delete('/cars/' + carId)
       router.push({ name: 'Cars' })
     } catch (error) {
       console.error(error)
